@@ -29,9 +29,11 @@ int main() {
                     run = false;
                     break;
                 }
-                if (event.key.keysym.sym == SDLK_ESCAPE) {
-                    run = false;
-                    break;
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.sym) {
+                    case SDLK_ESCAPE:
+                        run = false;
+                        break;
                 }
             }
         }
